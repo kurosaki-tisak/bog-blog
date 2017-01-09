@@ -22,12 +22,15 @@ android {
 
         debug {
             testCoverageEnabled true
+            minifyEnabled true
+            useProguard false
         }
 
         release {
             debuggable true
             testCoverageEnabled false
-            minifyEnabled false
+            shrinkResources true
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
